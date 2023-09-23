@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Oxygen, sans-serif;
+}
+
+.slider {
+    line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 0.9rem;
+    font-size: medium;
+}
+
+.slider div {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+}
+
+.slider div span {
+    padding-left: 15px
+}
+
+.slider-market-raw {
+    margin-right: 20px;
+    color: black
+}
+
+.slider-name {
+    color: #191970;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.header {
+    background-color: #191970;
+    height: 4.2rem;
+}
+
+.header-title {
+    color: white;
+    font-weight: bold;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.cards_title {
+    color: black;
+    margin-left: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+
+.card_body {
+    text-align: center;
+}
+
+.card_title {
+    padding: 1rem;
+}
+
+.card_btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d50000;
+    background: transparent;
+    color: #d50000;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card:hover .card_btn {
+    background: #d50000;
+    color: white;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 140%;                
+    background-color: black;
+    height: 1px;
+  }
+  .stock-row {
+    text-align: center;
+  }
+  .stock-column-data {
+    margin-top: 6rem;
+  }
+  .summary-span {
+    color: #191970; 
+    font-weight: bold;
+  }
+  .stock-headings {
+    margin-top: 2.7rem;
+  }
+  .stock-column-chart {
+    padding: 10px;
+    text-align: center;
+  }
+  .chart-true {
+    background-color: #FFCCCC; 
+    border: 1px solid red;
+  }
